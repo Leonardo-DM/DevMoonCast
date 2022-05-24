@@ -77,7 +77,7 @@ export default [
   },
   {
     title: "Shierro - Coffee Camino",
-    artist: "Shierro",
+    artist: "Dj L30 SC",
     cover: "loffi.jpg",
     file: "Shierro - Coffee Camino.mp3"
   }
