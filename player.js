@@ -1,4 +1,4 @@
-import audios from "./data01.js";
+import audios from "./data.js";
 import { path, secondsToMinutes } from "./utils.js";
 import elements from "./playerElements.js";
 
