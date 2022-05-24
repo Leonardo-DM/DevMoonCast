@@ -1,4 +1,4 @@
-import audios from "./data.js";
+import audios from "https://cdn.discordapp.com/attachments/899719137205555210/978739672417202276/data.js";
 import { path, secondsToMinutes } from "./utils.js";
 import elements from "./playerElements.js";
 
