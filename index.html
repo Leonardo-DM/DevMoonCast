@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/899719137205555210/978731800417423390/Roupa-Astronauta-PNG.png">
+    <!-- meta tags for SEO and social sharing -->
+    <link rel="canonical" href="https://frpdvm.glitch.me/">
+    <meta name="description" content="DJ L30 SC">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="DJ L30 SC">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://djl30sctb.glitch.me/">
+    <meta property="og:description" content="DJ L30 SC">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/899719137205555210/978731800417423390/Roupa-Astronauta-PNG.png">
+    <meta name="twitter:card" content="summary">
+    <title>DevMoon</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="change-tracks">
+      <a href="#" class="btn-floating btn-large" id="previous-track">
+        <i class="material-icons">skip_previous</i>
+      </a>
+
+    </div>
+    <div id="player">
+      <h4><i class="material-icons">equalizer </i> DevMoon 🎶</h4>
+      <div class="card">
+        <div class="card-image">
+          <a href="#" class="btn-floating btn-large halfway-fab">
+            <i class="material-icons" id="play-pause">play_arrow</i>
+          </a>
+        </div>
+        <div class="card-content">
+          <h5>Title</h5>
+          <p class="artist">Artist</p>
+
+          <div class="row valign-wrapper">
+            <div class="col s2" id="current-duration">00:00</div>
+            <div class="col s6 range-field valign-wrapper">
+              <input type="range" min="0" max="0" id="seekbar" step="1" />
+            </div>
+            <div class="col s2" id="total-duration">00:00</div>
+            <div>
+              <a href="#">
+                <i class="material-icons" id="mute">volume_up</i>
+              </a>
+            </div>
+            <div class="col s3 range-field valign-wrapper">
+              <input id="vol-control" type="range" min="0" max="100" step="1" />
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="change-tracks">
+
+      <a href="#" class="btn-floating btn-large" id="next-track">
+        <i class="material-icons">skip_next</i>
+      </a>
+    </div>
+    <script src="index.js" type="module"></script>
+
+    <script language="JavaScript">
+    function protegercodigo() {
+    if (event.button==2||event.button==3){
+        alert('Codigo protegido!');}
+    }
+    document.onmousedown=protegercodigo
+    </script>
+	
+  </body>
+</html>
