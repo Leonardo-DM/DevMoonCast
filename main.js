@@ -1,93 +1,63 @@
-import audios from "./data.js";
-import { path, secondsToMinutes } from "./utils.js";
-import elements from "./playerElements.js";
-
-export default {
-  audioData: audios,
-  currentAudio: {},
-  currentPlaying: 0,
-  isPlaying: false,
-  start() {
-    elements.get.call(this);
-    this.update();
+export default [
+  {
+    title:
+      "a girl and a cat - rainbow bridge",
+    artist: "Rainbow Bridge",
+    cover: "loffi.jpg",
+    file: "a girl and a cat - rainbow bridge.mp3"
   },
-
-  play() {
-    this.isPlaying = true;
-    this.audio.play();
-    this.playPause.innerText = "pause";
+  {
+    title: "Altair Blake - Cloudy",
+    artist: "Cloudy",
+    cover: "loffi.jpg",
+    file: "Altair Blake - Cloudy.mp3"
   },
-
-  pause() {
-    this.isPlaying = false;
-    this.audio.pause();
-    this.playPause.innerText = "play_arrow";
+  {
+    title: "Chilled Cougar - 435Hz",
+    artist: "435Hz",
+    cover: "loffi.jpg",
+    file: "Chilled Cougar - 435Hz.mp3"
   },
-
-  togglePlayPause() {
-    if (this.isPlaying) {
-      this.pause();
-    } else {
-      this.play();
-    }
+  {
+    title: "G Mills - Lush",
+    artist: "Lush",
+    cover: "loffi.jpg",
+    file: "G Mills - Lush.mp3"
   },
-
-  toggleMute() {
-    this.audio.muted = !this.audio.muted;
-    this.mute.innerText = this.audio.muted ? "volume_down" : "volume_up";
+  {
+    title: "Kupla - Kingdom in Blue",
+    artist: "Kupla",
+    cover: "loffi.jpg",
+    file: "Kupla - Kingdom in Blue.mp3"
   },
-
-  next() {
-    ++this.currentPlaying;
-
-    if (this.currentPlaying === this.audioData.length) {
-      this.currentPlaying = 0;
-    }
-    this.pause();
-    this.update();
-    this.play();
+  {
+    title: "Kupla - Roots",
+    artist: "Kupla",
+    cover: "loffi.jpg",
+    file: "Kupla - Roots.mp3"
   },
-  back() {
-    --this.currentPlaying;
-
-    if (this.currentPlaying === -1) {
-      this.currentPlaying = this.audioData.length - 1;
-    }
-
-    this.pause();
-    this.update();
-    this.play();
+  {
+    title: "Purrple Cat - Sugar Coat",
+    artist: "Purrple Cat",
+    cover: "loffi.jpg",
+    file: "Purrple Cat - Sugar Coat.mp3"
   },
-
-  setVolume(value) {
-    this.audio.volume = value / 100;
+  {
+    title: "Rook1e - I Fell in Love with You One Night in September",
+    artist: "Rook1e",
+    cover: "loffi.jpg",
+    file: "Rook1e - I Fell in Love with You One Night in September.mp3"
   },
-
-  setSeek(value) {
-    this.audio.currentTime = value;
+  {
+    title: "Saib - Sakura Trees",
+    artist: "Saib",
+    cover: "loffi.jpg",
+    file: "Saib - Sakura Trees.mp3"
   },
-
-  timeUpdate() {
-    this.currentDuration.innerText = secondsToMinutes(this.audio.currentTime);
-    this.seekbar.value = this.audio.currentTime;
-  },
-
-  update() {
-    this.currentAudio = this.audioData[this.currentPlaying];
-    this.cover.style.background = `url('${path(
-      this.currentAudio.cover
-    )}') no-repeat center center / cover`;
-    this.title.innerText = this.currentAudio.title;
-    this.artist.innerText = this.currentAudio.artist;
-    elements.createAudioElement.call(this, path(this.currentAudio.file));
-
-    this.audio.onloadeddata = () => {
-      elements.actions.call(this);
-    };
-  },
-
-  restart() {
-    this.currentPlaying = 0;
-    this.update();
+  {
+    title: "Shierro - Coffee Camino",
+    artist: "Dj L30 SC",
+    cover: "loffi.jpg",
+    file: "Shierro - Coffee Camino.mp3"
   }
-};
+];
